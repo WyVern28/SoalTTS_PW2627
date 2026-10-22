@@ -30,7 +30,7 @@ function runTest(testName, fn) {
 }
 
 console.log('\n============================================================');
-console.log('MEMULAI PENGUJIAN INTEGRITAS DOM & ASET: KANTIN KAMPUS ONLINE');
+console.log('MEMULAI PENGUJIAN INTEGRITAS DOM & ASET: KANTINBIRU (FTI)');
 console.log('============================================================\n');
 
 const workspaceDir = __dirname;
@@ -52,12 +52,19 @@ runTest('File index.html, style.css, dan script.js tersedia', () => {
   assert.ok(fs.existsSync(jsPath), 'script.js harus ada');
 });
 
-runTest('Seluruh aset SVG menu tersedia di folder assets/', () => {
-  const svgs = ['nasi-goreng.svg', 'mie-ayam.svg', 'es-teh.svg', 'jus-alpukat.svg'];
-  svgs.forEach((svg) => {
-    const fullPath = path.join(assetsDir, svg);
-    assert.ok(fs.existsSync(fullPath), `Aset ${svg} harus tersedia`);
+runTest('Seluruh aset gambar menu terbaru tersedia di folder assets/', () => {
+  const images = ['download (20).png', 'mie ayam.png', 'yaw.png', 'bruh.png'];
+  images.forEach((img) => {
+    const fullPath = path.join(assetsDir, img);
+    assert.ok(fs.existsSync(fullPath), `Aset ${img} harus tersedia di assets/`);
   });
+});
+
+runTest('Gambar menu terbaru direferensikan pada index.html', () => {
+  assert.ok(htmlContent.includes('download (20).png'), 'Nasi goreng harus menggunakan download (20).png');
+  assert.ok(htmlContent.includes('mie ayam.png'), 'Mie ayam harus menggunakan mie ayam.png');
+  assert.ok(htmlContent.includes('yaw.png'), 'Es teh harus menggunakan yaw.png');
+  assert.ok(htmlContent.includes('bruh.png'), 'Jus alpukat harus menggunakan bruh.png');
 });
 
 // 2. Integritas Data Menu di index.html
@@ -129,6 +136,34 @@ runTest('style.css memiliki breakpoint media query untuk mobile dan reduced-moti
   assert.ok(cssContent.includes('@media (max-width: 768px)'));
   assert.ok(cssContent.includes('@media (max-width: 480px)'));
   assert.ok(cssContent.includes('@media (prefers-reduced-motion: reduce)'));
+});
+
+// 5. Verifikasi Palet Powder Blue + Cream + Deep Blue & Pola Background
+console.log('\n[Kategori 5] Verifikasi Palet Powder Blue + Cream + Deep Blue:');
+
+runTest('Palet warna acuan Powder Blue + Cream + Deep Blue diterapkan pada style.css', () => {
+  assert.ok(cssContent.includes('#E1EFFB'), 'Powder Blue #E1EFFB harus didefinisikan');
+  assert.ok(cssContent.includes('#FFF9EF'), 'Cream #FFF9EF harus didefinisikan');
+  assert.ok(cssContent.includes('#FFFFFF'), 'White #FFFFFF harus didefinisikan');
+  assert.ok(cssContent.includes('#1D4ED8'), 'Deep Blue #1D4ED8 harus didefinisikan');
+  assert.ok(cssContent.includes('#243247'), 'Dark Navy #243247 harus didefinisikan');
+  assert.ok(cssContent.includes('#64748B'), 'Muted Blue Gray #64748B harus didefinisikan');
+  assert.ok(cssContent.includes('#BFDBFE'), 'Soft Blue #BFDBFE harus didefinisikan');
+});
+
+runTest('Pola background dekoratif halus diterapkan pada body di style.css', () => {
+  assert.ok(cssContent.includes('background-image:'), 'Pola background-image harus ada');
+  assert.ok(cssContent.includes('radial-gradient('), 'Pola dot matrix radial-gradient harus ada');
+  assert.ok(cssContent.includes('linear-gradient('), 'Garis grid halus linear-gradient harus ada');
+});
+
+// 6. Verifikasi Identitas & Branding KantinBiru
+console.log('\n[Kategori 6] Verifikasi Identitas & Branding KantinBiru:');
+
+runTest('Nama KantinBiru dan subtitle Pujasera Mahasiswa FTI tampil di index.html', () => {
+  assert.ok(htmlContent.includes('KantinBiru'), 'Nama aplikasi KantinBiru harus ada');
+  assert.ok(htmlContent.includes('Pujasera Mahasiswa FTI'), 'Subtitle Pujasera Mahasiswa FTI harus ada');
+  assert.ok(!htmlContent.includes('Kantin Kampus Online'), 'Nama lama Kantin Kampus Online tidak boleh ada di antarmuka');
 });
 
 console.log('\n============================================================');

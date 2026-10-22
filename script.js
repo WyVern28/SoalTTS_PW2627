@@ -2,7 +2,7 @@
 
 /**
  * ============================================================================
- * KANTIN KAMPUS ONLINE - LOGIKA BISNIS & KONTROL APLIKASI
+ * KANTINBIRU - PUJASERA MAHASISWA FTI (LOGIKA BISNIS & KONTROL APLIKASI)
  * ============================================================================
  * Fitur:
  * 1. Kalkulasi subtotal dari menu yang dipilih (kuantitas × harga satuan).
@@ -350,11 +350,9 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
       if (discountPill) {
         if (order.hasDiscount) {
-          discountPill.style.backgroundColor = 'var(--c-green-primary)';
-          discountPill.style.color = '#ffffff';
+          discountPill.classList.add('is-qualified');
         } else {
-          discountPill.style.backgroundColor = 'var(--c-green-soft)';
-          discountPill.style.color = 'var(--c-green-primary)';
+          discountPill.classList.remove('is-qualified');
         }
       }
 
@@ -407,7 +405,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         ? 'Bungkus (Takeaway)'
         : 'Makan di Tempat (Dine-in)';
 
-      const notes = (orderNoteInput && orderNoteInput.value.trim()) || 'Warga Kampus';
+      const notes = (orderNoteInput && orderNoteInput.value.trim()) || 'Mahasiswa FTI';
 
       // Tampilkan rincian pesanan di modal review
       if (modalServiceDisplay) modalServiceDisplay.textContent = serviceName;
@@ -484,9 +482,9 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         ? 'Bungkus (Takeaway)'
         : 'Makan di Tempat (Dine-in)';
 
-      // Buat nomor transaksi simulasi unik
+      // Buat nomor transaksi simulasi unik KantinBiru (#KB-XXXXX)
       const randomSuffix = Math.floor(10000 + Math.random() * 90000);
-      const transactionCode = `#KTN-${randomSuffix}`;
+      const transactionCode = `#KB-${randomSuffix}`;
       const now = new Date();
       const timeStr = now.toLocaleDateString('id-ID', {
         day: 'numeric',

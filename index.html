@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Website pemesanan menu Kantin Kampus Online. Pesan menu makanan dan minuman mahasiswa tanpa antre, hitung subtotal otomatis, dan diskon 5% untuk pesanan minimal Rp 100.000.">
-  <title>Kantin Kampus Online — Pesan Menu Favorit Mahasiswa</title>
+  <meta name="description" content="Sistem pemesanan makanan dan minuman online KantinBiru — Pujasera Mahasiswa FTI. Pesan menu favorit mahasiswa tanpa antre, perhitungan subtotal otomatis, dan diskon 5% untuk pesanan minimal Rp 100.000.">
+  <title>KantinBiru — Pujasera Mahasiswa FTI</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -12,8 +12,9 @@
   <!-- HEADER UTAMA -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#beranda" aria-label="Kantin Kampus Online, kembali ke beranda">
+      <a class="brand" href="#beranda" aria-label="KantinBiru, kembali ke beranda">
         <span class="brand-badge" aria-hidden="true">
+          <!-- Ikon Cangkir Minuman / Makanan Modern -->
           <svg class="brand-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
             <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
@@ -23,8 +24,10 @@
           </svg>
         </span>
         <span class="brand-text">
-          <span class="brand-title">Kantin<span class="brand-accent">Kampus</span></span>
-          <span class="brand-subtitle">Pujasera Mahasiswa</span>
+          <span class="brand-title">
+            <span class="brand-part-kantin">Kantin</span><span class="brand-part-biru">Biru</span>
+          </span>
+          <span class="brand-subtitle">Pujasera Mahasiswa FTI</span>
         </span>
       </a>
 
@@ -34,7 +37,7 @@
       </nav>
 
       <div class="header-actions">
-        <div class="canteen-status-pill" title="Jam buka kantin: 08.00 - 16.30 WIB">
+        <div class="canteen-status-pill" title="Jam operasional KantinBiru: 08.00 - 16.30 WIB">
           <span class="status-dot" aria-hidden="true"></span>
           <span>Buka 08:00–16:30</span>
         </div>
@@ -53,17 +56,17 @@
   </header>
 
   <main id="main-content">
-    <!-- HERO SECTION KONTEKSTUAL KANTIN KAMPUS -->
+    <!-- HERO SECTION KANTINBIRU -->
     <section class="hero" id="beranda" aria-labelledby="hero-title">
       <div class="hero-container">
         <div class="hero-copy">
           <div class="canteen-tag">
             <span class="canteen-tag-pin" aria-hidden="true">📍</span>
-            <span>PUJASERA GEDUNG KULIAH B LANTAI 1</span>
+            <span>PUJASERA MAHASISWA FTI · LANTAI 1</span>
           </div>
-          <h1 id="hero-title">Makan Siang Enak &amp; Cepat, <span>Tanpa Antre Panjang.</span></h1>
+          <h1 id="hero-title">Makan Siang Enak &amp; Cepat di <span class="brand-highlight">KantinBiru</span>, <span>Tanpa Antre.</span></h1>
           <p class="hero-description">
-            Pesan hidangan favoritmu langsung dari gawai di sela jam kuliah. Pantau subtotal pesanan seketika, dan dapatkan otomatis <strong>diskon 5%</strong> untuk pesanan minimal <strong>Rp 100.000</strong>.
+            Pesan hidangan favoritmu langsung dari gawai di sela jam perkuliahan FTI. Pantau subtotal pesanan secara langsung, dan dapatkan otomatis <strong>diskon 5%</strong> untuk pesanan minimal <strong>Rp 100.000</strong>.
           </p>
           
           <div class="hero-cta-group">
@@ -78,7 +81,7 @@
             </a>
           </div>
 
-          <ul class="hero-perks" aria-label="Keunggulan layanan kantin">
+          <ul class="hero-perks" aria-label="Keunggulan layanan KantinBiru">
             <li>
               <span class="perk-check" aria-hidden="true">✓</span>
               <span>Diskon 5% belanja ≥ Rp100.000</span>
@@ -89,15 +92,16 @@
             </li>
             <li>
               <span class="perk-check" aria-hidden="true">✓</span>
-              <span>Menu higienis, halal &amp; segar</span>
+              <span>Menu higienis, halal &amp; siap cepat</span>
             </li>
           </ul>
         </div>
 
         <div class="hero-aside">
+          <!-- PANEL INFORMASI KANTINBIRU (WARNA CREAM HANGAT) -->
           <div class="canteen-bulletin-card">
             <div class="bulletin-header">
-              <span class="bulletin-badge">INFORMASI KANTIN</span>
+              <span class="bulletin-badge">INFORMASI KANTINBIRU</span>
               <span class="bulletin-live"><span class="live-pulse" aria-hidden="true"></span> Operasional Aktif</span>
             </div>
             
@@ -107,13 +111,17 @@
                 <div class="info-value">08.00 – 16.30 WIB (Senin – Jumat)</div>
               </div>
               <div class="bulletin-info-row">
+                <div class="info-label">Lokasi Pujasera</div>
+                <div class="info-value">Gedung FTI Kampus, Lantai 1</div>
+              </div>
+              <div class="bulletin-info-row">
                 <div class="info-label">Metode Bayar</div>
-                <div class="info-value">QRIS Kampus, Tunai di Kasir, KantinPay</div>
+                <div class="info-value">QRIS Kantin, Tunai Kasir, KantinPay FTI</div>
               </div>
               <div class="bulletin-promo-box">
                 <div class="promo-icon" aria-hidden="true">🏷️</div>
                 <div class="promo-content">
-                  <strong>Program Hemat Mahasiswa</strong>
+                  <strong>Program Hemat Mahasiswa FTI</strong>
                   <p>Ajak teman kelompokmu! Setiap pesanan dengan subtotal mencapai Rp100.000 otomatis dipotong diskon 5%.</p>
                 </div>
               </div>
@@ -121,9 +129,9 @@
 
             <div class="bulletin-footer">
               <div class="bulletin-dish-preview">
-                <img src="assets/nasi-goreng.svg" alt="Ilustrasi Nasi Goreng Spesial Kampus" width="70" height="52" loading="eager">
+                <img src="assets/download (20).png" alt="Foto Nasi Goreng Spesial KantinBiru" width="70" height="52" loading="eager">
                 <div>
-                  <span class="dish-tag">Menu Terpopuler</span>
+                  <span class="dish-tag">Menu Terpopuler FTI</span>
                   <div class="dish-name">Nasi Goreng Spesial Telur</div>
                 </div>
               </div>
@@ -138,7 +146,7 @@
       <div class="section-heading">
         <div>
           <p class="section-eyebrow">PILIHAN HARI INI</p>
-          <h2 id="menu-heading">Menu Favorit Kantin Kampus</h2>
+          <h2 id="menu-heading">Menu Favorit KantinBiru</h2>
           <p class="section-subtitle">Tentukan porsi dengan tombol tambah/kurang atau masukkan angka porsi secara langsung.</p>
         </div>
         <div class="menu-count-badge" aria-label="Jumlah menu yang tersedia">
@@ -154,12 +162,12 @@
         <article class="menu-card" id="card-nasi-goreng" data-id="nasi-goreng" data-name="Nasi Goreng" data-price="18000">
           <div class="menu-image image-orange">
             <span class="menu-badge">Paling Laris</span>
-            <img src="assets/nasi-goreng.svg" alt="Ilustrasi sepiring nasi goreng hangat dengan telur dan sayuran" width="220" height="150" loading="lazy">
+            <img src="assets/download (20).png" alt="Foto sepiring nasi goreng hangat dengan telur dan sayuran" width="220" height="150" loading="lazy">
           </div>
           <div class="menu-info">
             <div class="menu-category">MAKANAN UTAMA</div>
             <h3 class="menu-title">Nasi Goreng</h3>
-            <p class="menu-desc">Nasi goreng gurih dengan telur, sayuran segar, dan bumbu khas kantin.</p>
+            <p class="menu-desc">Nasi goreng gurih dengan telur, sayuran segar, dan bumbu khas KantinBiru.</p>
             <div class="menu-bottom">
               <div class="price">
                 <span class="price-val">Rp 18.000</span>
@@ -178,12 +186,12 @@
         <article class="menu-card" id="card-mie-ayam" data-id="mie-ayam" data-name="Mie Ayam" data-price="15000">
           <div class="menu-image image-cream">
             <span class="menu-badge badge-alt">Favorit Mahasiswa</span>
-            <img src="assets/mie-ayam.svg" alt="Ilustrasi semangkuk mie ayam dengan potongan ayam berbumbu" width="220" height="150" loading="lazy">
+            <img src="assets/mie ayam.png" alt="Foto semangkuk mie ayam dengan potongan ayam berbumbu" width="220" height="150" loading="lazy">
           </div>
           <div class="menu-info">
             <div class="menu-category">MAKANAN UTAMA</div>
             <h3 class="menu-title">Mie Ayam</h3>
-            <p class="menu-desc">Mie kenyal dengan topping ayam bumbu manis gurih dan sayuran sawi hijau.</p>
+            <p class="menu-desc">Mie kenyal dengan topping ayam bumbu manis gurih dan sayuran sawi hijau segar.</p>
             <div class="menu-bottom">
               <div class="price">
                 <span class="price-val">Rp 15.000</span>
@@ -201,7 +209,7 @@
         <!-- MENU 3: ES TEH -->
         <article class="menu-card" id="card-es-teh" data-id="es-teh" data-name="Es Teh" data-price="5000">
           <div class="menu-image image-pink">
-            <img src="assets/es-teh.svg" alt="Ilustrasi segelas es teh manis dingin menyegarkan" width="220" height="150" loading="lazy">
+            <img src="assets/yaw.png" alt="Foto segelas es teh manis dingin menyegarkan" width="220" height="150" loading="lazy">
           </div>
           <div class="menu-info">
             <div class="menu-category">MINUMAN SEGAR</div>
@@ -224,12 +232,12 @@
         <!-- MENU 4: JUS ALPUKAT -->
         <article class="menu-card" id="card-jus-alpukat" data-id="jus-alpukat" data-name="Jus Alpukat" data-price="12000">
           <div class="menu-image image-green">
-            <img src="assets/jus-alpukat.svg" alt="Ilustrasi segelas jus alpukat kental dengan cokelat" width="220" height="150" loading="lazy">
+            <img src="assets/bruh.png" alt="Foto segelas jus alpukat kental dengan krim" width="220" height="150" loading="lazy">
           </div>
           <div class="menu-info">
             <div class="menu-category">MINUMAN SEGAR</div>
             <h3 class="menu-title">Jus Alpukat</h3>
-            <p class="menu-desc">Jus alpukat mentega kental dengan paduan susu kental manis cokelat.</p>
+            <p class="menu-desc">Jus alpukat mentega kental dengan paduan susu kental manis cokelat lezat.</p>
             <div class="menu-bottom">
               <div class="price">
                 <span class="price-val">Rp 12.000</span>
@@ -249,7 +257,7 @@
     <!-- SECTION PESANAN SAYA & PEMBAYARAN -->
     <section class="order-section section-wrap" id="pesanan" aria-labelledby="order-heading">
       <div class="order-panel">
-        <!-- BAGIAN KIRI: DAFTAR PESANAN & PREFERENSI -->
+        <!-- BAGIAN KIRI: DAFTAR PESANAN & PREFERENSI (PUTIH BERSIH) -->
         <div class="order-main">
           <div class="order-title-row">
             <div>
@@ -261,7 +269,7 @@
             </div>
           </div>
 
-          <!-- OPSI PENYAJIAN KANTIN -->
+          <!-- OPSI PENYAJIAN KANTINBIRU -->
           <div class="order-options-bar">
             <fieldset class="service-type-group">
               <legend class="options-legend">Opsi Penyajian:</legend>
@@ -282,8 +290,8 @@
             </fieldset>
 
             <div class="order-notes-wrap">
-              <label for="order-note" class="sr-only">Nama Pemesan atau Nomor Meja</label>
-              <input type="text" id="order-note" class="order-notes-input" placeholder="Nama pemesan / nomor meja (opsional)" maxlength="40">
+              <label for="order-note" class="sr-only">Nama Pemesan atau Nomor Meja FTI</label>
+              <input type="text" id="order-note" class="order-notes-input" placeholder="Nama pemesan / nomor meja FTI (opsional)" maxlength="40">
             </div>
           </div>
 
@@ -320,7 +328,7 @@
           </div>
         </div>
 
-        <!-- BAGIAN KANAN: RINGKASAN PEMBAYARAN -->
+        <!-- BAGIAN KANAN: RINGKASAN PEMBAYARAN (WARNA CREAM HANGAT) -->
         <aside class="payment-summary" aria-label="Ringkasan dan simulasi pembayaran">
           <h3>Ringkasan Pembayaran</h3>
 
@@ -331,7 +339,7 @@
 
           <div class="summary-line discount-line">
             <span class="discount-label">
-              Diskon Mahasiswa
+              Diskon Mahasiswa FTI
               <span class="discount-pill" id="discount-pill">5%</span>
             </span>
             <strong id="diskon" class="discount-value">− Rp 0</strong>
@@ -352,7 +360,7 @@
           <div class="summary-total">
             <div class="total-label-wrap">
               <span class="total-label">Total Pembayaran</span>
-              <small class="total-tax-note">Sudah termasuk PPN &amp; biaya kemasan</small>
+              <small class="total-tax-note">Sudah termasuk biaya layanan KantinBiru</small>
             </div>
             <strong id="total-harga" class="total-amount">Rp 0</strong>
           </div>
@@ -366,7 +374,7 @@
 
           <div class="payment-guarantee">
             <span class="guarantee-icon" aria-hidden="true">🛡️</span>
-            <span>Simulasi kasir online kantin kampus. Tidak ada pendebitan saldo riil.</span>
+            <span>Simulasi pemesanan KantinBiru FTI. Tidak ada pendebitan saldo riil.</span>
           </div>
         </aside>
       </div>
@@ -379,7 +387,7 @@
       <!-- HEADER MODAL -->
       <div class="modal-header">
         <div>
-          <span class="modal-badge">KASIR KANTIN KAMPUS</span>
+          <span class="modal-badge">KASIR KANTINBIRU</span>
           <h2 id="modal-title" class="modal-title">Konfirmasi Pembayaran</h2>
         </div>
         <button type="button" class="btn-close-modal" id="modal-close-x" aria-label="Tutup jendela pembayaran">&times;</button>
@@ -394,7 +402,7 @@
           </div>
           <div class="modal-info-col">
             <span class="info-muted">Pemesan / Meja:</span>
-            <strong id="modal-notes-display">Warga Kampus</strong>
+            <strong id="modal-notes-display">Mahasiswa FTI</strong>
           </div>
         </div>
 
@@ -428,7 +436,7 @@
               <span class="pay-method-content">
                 <span class="pay-method-icon" aria-hidden="true">📱</span>
                 <span class="pay-method-info">
-                  <strong>QRIS Kantin</strong>
+                  <strong>QRIS KantinBiru</strong>
                   <small>BCA, Mandiri, GoPay, OVO</small>
                 </span>
               </span>
@@ -450,8 +458,8 @@
               <span class="pay-method-content">
                 <span class="pay-method-icon" aria-hidden="true">💳</span>
                 <span class="pay-method-info">
-                  <strong>Saldo Mahasiswa</strong>
-                  <small>KantinPay / Kartu Mahasiswa</small>
+                  <strong>KantinPay FTI</strong>
+                  <small>Saldo Kartu Mahasiswa</small>
                 </span>
               </span>
             </label>
@@ -476,12 +484,12 @@
           </svg>
         </div>
         <h3 class="success-title">Pembayaran Berhasil Disimulasikan!</h3>
-        <p class="success-desc">Pesananmu telah diteruskan ke dapur kantin kampus dan sedang diproses.</p>
+        <p class="success-desc">Pesananmu telah diteruskan ke dapur KantinBiru dan sedang disiapkan.</p>
 
         <div class="receipt-card">
           <div class="receipt-row">
             <span>Nomor Pesanan</span>
-            <strong id="receipt-id">#KTN-00000</strong>
+            <strong id="receipt-id">#KB-00000</strong>
           </div>
           <div class="receipt-row">
             <span>Waktu Transaksi</span>
@@ -489,7 +497,7 @@
           </div>
           <div class="receipt-row">
             <span>Metode Bayar</span>
-            <span id="receipt-method">QRIS Kantin</span>
+            <span id="receipt-method">QRIS KantinBiru</span>
           </div>
           <div class="receipt-row">
             <span>Opsi Layanan</span>
@@ -503,7 +511,7 @@
         </div>
 
         <div class="success-notice">
-          <span aria-hidden="true">📢</span> Silakan ambil pesanan di konter kantin saat nomor pesananmu dipanggil.
+          <span aria-hidden="true">📢</span> Silakan ambil pesanan di konter KantinBiru saat nomor pesananmu dipanggil.
         </div>
 
         <button type="button" class="btn-success-finish" id="btn-success-finish">
@@ -517,7 +525,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a class="brand" href="#beranda" aria-label="Kantin Kampus Online">
+        <a class="brand" href="#beranda" aria-label="KantinBiru">
           <span class="brand-badge" aria-hidden="true">
             <svg class="brand-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
@@ -528,27 +536,29 @@
             </svg>
           </span>
           <span class="brand-text">
-            <span class="brand-title">Kantin<span class="brand-accent">Kampus</span></span>
-            <span class="brand-subtitle">Pujasera Mahasiswa</span>
+            <span class="brand-title">
+              <span class="brand-part-kantin">Kantin</span><span class="brand-part-biru">Biru</span>
+            </span>
+            <span class="brand-subtitle">Pujasera Mahasiswa FTI</span>
           </span>
         </a>
-        <p class="footer-desc">Layanan pemesanan praktis untuk mahasiswa, dosen, dan karyawan kampus. Makan enak, hemat waktu, tetap produktif.</p>
+        <p class="footer-desc">Layanan pemesanan makanan dan minuman praktis untuk mahasiswa, dosen, dan sivitas akademika FTI. Bersih, cepat, hangat, dan hemat.</p>
       </div>
 
       <div class="footer-info">
         <div class="footer-info-block">
           <div class="footer-info-title">Lokasi &amp; Jam Buka</div>
-          <p>Pujasera Lantai 1, Gedung Kuliah B<br>Senin – Jumat: 08.00 – 16.30 WIB</p>
+          <p>Pujasera Lantai 1, Gedung FTI Kampus<br>Senin – Jumat: 08.00 – 16.30 WIB</p>
         </div>
         <div class="footer-info-block">
-          <div class="footer-info-title">Ketentuan Diskon</div>
-          <p>Diskon 5% otomatis berlaku untuk setiap transaksi dengan subtotal minimal Rp 100.000.</p>
+          <div class="footer-info-title">Ketentuan Diskon 5%</div>
+          <p>Diskon 5% otomatis berlaku untuk setiap pesanan dengan subtotal minimal Rp 100.000.</p>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Kantin Kampus Online &middot; UTS Pemrograman Web (HTML, CSS, JavaScript Murni)</p>
+      <p>&copy; 2026 KantinBiru &middot; Pujasera Mahasiswa FTI (UTS Pemrograman Web)</p>
     </div>
   </footer>
 </body>

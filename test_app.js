@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * TEST SUITE: KANTIN KAMPUS ONLINE (Node.js Test Runner)
+ * TEST SUITE: KANTINBIRU - PUJASERA MAHASISWA FTI (Node.js Test Runner)
  * ============================================================================
  * Pengujian komprehensif untuk memverifikasi:
  * 1. Sanitasi kuantitas (rentang 0-99, nilai negatif, string, float).
@@ -44,7 +44,7 @@ function runTest(testName, fn) {
 }
 
 console.log('\n============================================================');
-console.log('MEMULAI PENGUJIAN OTOMATIS: KANTIN KAMPUS ONLINE');
+console.log('MEMULAI PENGUJIAN OTOMATIS: KANTINBIRU (PUJASERA MAHASISWA FTI)');
 console.log('============================================================\n');
 
 // ----------------------------------------------------------------------------

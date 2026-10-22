@@ -108,7 +108,7 @@ console.log('\nLangkah 6: Pengguna membuka kembali modal dan menekan KONFIRMASI 
 state.modalOpen = true;
 
 // Simulasi klik KONFIRMASI (confirmPayment)
-const receiptCode = `#KTN-${Math.floor(10000 + Math.random() * 90000)}`;
+const receiptCode = `#KB-${Math.floor(10000 + Math.random() * 90000)}`;
 state.receipt = {
   id: receiptCode,
   totalPaid: order.total,
