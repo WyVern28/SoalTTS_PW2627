@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" role="img" aria-label="Ilustrasi nasi goreng">
+  <ellipse cx="150" cy="177" rx="102" ry="17" fill="#c6a77a" opacity=".26"/>
+  <path d="M52 102c7 57 41 91 98 91s91-34 98-91H52Z" fill="#fffdf7" stroke="#e3d8c5" stroke-width="4"/>
+  <ellipse cx="150" cy="102" rx="99" ry="48" fill="#e8a544" stroke="#fff5df" stroke-width="8"/>
+  <path d="M66 100c13-14 21-11 30-2s17 9 27-1 19-12 28-2 18 10 27-1 18-10 27 0 19 7 28-2 14-4 21 4" fill="none" stroke="#b96d24" stroke-width="8" stroke-linecap="round"/>
+  <path d="M82 83l12 9-8 7 11 7M122 65l-5 13 11 5-7 11M167 68l9 10-7 9 11 8M204 87l-9 8 8 7-5 10" fill="none" stroke="#4e7e42" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="115" cy="94" r="9" fill="#f6f0d0"/><circle cx="173" cy="111" r="8" fill="#fff2c7"/><circle cx="204" cy="102" r="7" fill="#fff2c7"/><circle cx="143" cy="84" r="6" fill="#d95c37"/>
+  <path d="M105 113c9-10 18-10 27 0-9 9-18 9-27 0Z" fill="#d94e36"/><path d="M171 80c8-9 15-9 23 0-8 8-15 8-23 0Z" fill="#d94e36"/>
+  <path d="M126 48c-12-17-5-27 8-27 12 0 15 13 10 23 12-18 28-14 30-2 3 14-20 22-35 21" fill="#57934c" stroke="#3b7037" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M135 56c9-12 17-18 28-19" fill="none" stroke="#c3df8a" stroke-width="3" stroke-linecap="round"/>
+</svg>

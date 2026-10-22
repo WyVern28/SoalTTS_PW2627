@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" role="img" aria-label="Ilustrasi es teh">
+  <ellipse cx="151" cy="185" rx="74" ry="12" fill="#b68d82" opacity=".22"/>
+  <path d="M104 53h94l-10 117c-2 15-11 22-37 22s-35-7-37-22L104 53Z" fill="#fffdf8" fill-opacity=".72" stroke="#d8b9a9" stroke-width="4"/>
+  <path d="M112 80h78l-7 90c-1 10-8 14-32 14s-31-4-32-14l-7-90Z" fill="#b95736"/>
+  <path d="M112 80h78l-3 23h-73Z" fill="#d8874f"/>
+  <path d="M133 44l-18-21M150 43l1-26M171 44l18-22" stroke="#4d8252" stroke-width="5" stroke-linecap="round"/>
+  <path d="M136 61l-7 13 14 9-4 15M166 67l-5 12 13 9-3 13" fill="none" stroke="#f6e9d4" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+  <rect x="126" y="92" width="24" height="22" rx="5" fill="#fff3de" fill-opacity=".85" transform="rotate(-12 138 103)"/>
+  <rect x="157" y="119" width="23" height="22" rx="5" fill="#fff3de" fill-opacity=".85" transform="rotate(12 168 130)"/>
+  <path d="M104 53h94" stroke="#fdf8ed" stroke-width="8" stroke-linecap="round"/>
+  <path d="M176 48l20-25" stroke="#d7a66f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M185 53c12-6 16-16 17-28" fill="none" stroke="#a2c878" stroke-width="3" stroke-linecap="round"/>
+</svg>

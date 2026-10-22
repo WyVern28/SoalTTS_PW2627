@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" role="img" aria-label="Ilustrasi jus alpukat">
+  <ellipse cx="149" cy="183" rx="75" ry="13" fill="#879b6d" opacity=".25"/>
+  <path d="M100 54h100l-10 116c-1 15-12 23-40 23s-39-8-40-23L100 54Z" fill="#fffef8" fill-opacity=".7" stroke="#c4d0b5" stroke-width="4"/>
+  <path d="M108 81h84l-7 88c-1 9-9 14-35 14s-34-5-35-14l-7-88Z" fill="#73964e"/>
+  <path d="M108 81h84l-2 19h-80Z" fill="#9db86b"/>
+  <path d="M144 53l9-34" stroke="#cf8b55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M152 37c14-22 34-16 35-1 1 15-21 25-35 19" fill="#4d8246" stroke="#35683c" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M158 48c8-8 15-12 23-12" fill="none" stroke="#b5d28c" stroke-width="3" stroke-linecap="round"/>
+  <rect x="122" y="94" width="25" height="22" rx="5" fill="#dce9b9" fill-opacity=".9" transform="rotate(-12 134 105)"/>
+  <rect x="155" y="119" width="24" height="23" rx="5" fill="#dce9b9" fill-opacity=".9" transform="rotate(10 167 130)"/>
+  <circle cx="151" cy="78" r="5" fill="#e7f0cf"/>
+  <path d="M111 139c3 10 7 16 15 21M187 139c-3 10-7 16-15 21" fill="none" stroke="#b3ca84" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+  <path d="M100 54h100" stroke="#fdfcf6" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website pemesanan menu Kantin Kampus Online. Pesan menu makanan dan minuman mahasiswa tanpa antre, hitung subtotal otomatis, dan diskon 5% untuk pesanan minimal Rp 100.000.">
+  <title>Kantin Kampus Online — Pesan Menu Favorit Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- HEADER UTAMA -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#beranda" aria-label="Kantin Kampus Online, kembali ke beranda">
+        <span class="brand-badge" aria-hidden="true">
+          <svg class="brand-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <line x1="6" y1="1" x2="6" y2="4"></line>
+            <line x1="10" y1="1" x2="10" y2="4"></line>
+            <line x1="14" y1="1" x2="14" y2="4"></line>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Kantin<span class="brand-accent">Kampus</span></span>
+          <span class="brand-subtitle">Pujasera Mahasiswa</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="#menu" class="nav-link">Daftar Menu</a>
+        <a href="#pesanan" class="nav-link">Pesanan Saya</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="canteen-status-pill" title="Jam buka kantin: 08.00 - 16.30 WIB">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Buka 08:00–16:30</span>
+        </div>
+        <a class="header-cart-btn" href="#pesanan" aria-label="Lihat keranjang pesanan">
+          <span class="cart-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </span>
+          <span id="nav-cart-count" class="nav-cart-count">0 Menu</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION KONTEKSTUAL KANTIN KAMPUS -->
+    <section class="hero" id="beranda" aria-labelledby="hero-title">
+      <div class="hero-container">
+        <div class="hero-copy">
+          <div class="canteen-tag">
+            <span class="canteen-tag-pin" aria-hidden="true">📍</span>
+            <span>PUJASERA GEDUNG KULIAH B LANTAI 1</span>
+          </div>
+          <h1 id="hero-title">Makan Siang Enak &amp; Cepat, <span>Tanpa Antre Panjang.</span></h1>
+          <p class="hero-description">
+            Pesan hidangan favoritmu langsung dari gawai di sela jam kuliah. Pantau subtotal pesanan seketika, dan dapatkan otomatis <strong>diskon 5%</strong> untuk pesanan minimal <strong>Rp 100.000</strong>.
+          </p>
+          
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn-primary-hero">
+              <span>Pilih Menu Sekarang</span>
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v10.586l3.293-3.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 14.586V4a1 1 0 011-1z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="#pesanan" class="btn-secondary-hero">
+              <span>Cek Rincian Pesanan</span>
+            </a>
+          </div>
+
+          <ul class="hero-perks" aria-label="Keunggulan layanan kantin">
+            <li>
+              <span class="perk-check" aria-hidden="true">✓</span>
+              <span>Diskon 5% belanja ≥ Rp100.000</span>
+            </li>
+            <li>
+              <span class="perk-check" aria-hidden="true">✓</span>
+              <span>Pilihan Dine-in atau Bungkus</span>
+            </li>
+            <li>
+              <span class="perk-check" aria-hidden="true">✓</span>
+              <span>Menu higienis, halal &amp; segar</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-aside">
+          <div class="canteen-bulletin-card">
+            <div class="bulletin-header">
+              <span class="bulletin-badge">INFORMASI KANTIN</span>
+              <span class="bulletin-live"><span class="live-pulse" aria-hidden="true"></span> Operasional Aktif</span>
+            </div>
+            
+            <div class="bulletin-body">
+              <div class="bulletin-info-row">
+                <div class="info-label">Jam Layanan</div>
+                <div class="info-value">08.00 – 16.30 WIB (Senin – Jumat)</div>
+              </div>
+              <div class="bulletin-info-row">
+                <div class="info-label">Metode Bayar</div>
+                <div class="info-value">QRIS Kampus, Tunai di Kasir, KantinPay</div>
+              </div>
+              <div class="bulletin-promo-box">
+                <div class="promo-icon" aria-hidden="true">🏷️</div>
+                <div class="promo-content">
+                  <strong>Program Hemat Mahasiswa</strong>
+                  <p>Ajak teman kelompokmu! Setiap pesanan dengan subtotal mencapai Rp100.000 otomatis dipotong diskon 5%.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bulletin-footer">
+              <div class="bulletin-dish-preview">
+                <img src="assets/nasi-goreng.svg" alt="Ilustrasi Nasi Goreng Spesial Kampus" width="70" height="52" loading="eager">
+                <div>
+                  <span class="dish-tag">Menu Terpopuler</span>
+                  <div class="dish-name">Nasi Goreng Spesial Telur</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DAFTAR MENU -->
+    <section class="menu-section section-wrap" id="menu" aria-labelledby="menu-heading">
+      <div class="section-heading">
+        <div>
+          <p class="section-eyebrow">PILIHAN HARI INI</p>
+          <h2 id="menu-heading">Menu Favorit Kantin Kampus</h2>
+          <p class="section-subtitle">Tentukan porsi dengan tombol tambah/kurang atau masukkan angka porsi secara langsung.</p>
+        </div>
+        <div class="menu-count-badge" aria-label="Jumlah menu yang tersedia">
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+          </svg>
+          <span>4 Pilihan Menu Segar</span>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <!-- MENU 1: NASI GORENG -->
+        <article class="menu-card" id="card-nasi-goreng" data-id="nasi-goreng" data-name="Nasi Goreng" data-price="18000">
+          <div class="menu-image image-orange">
+            <span class="menu-badge">Paling Laris</span>
+            <img src="assets/nasi-goreng.svg" alt="Ilustrasi sepiring nasi goreng hangat dengan telur dan sayuran" width="220" height="150" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <div class="menu-category">MAKANAN UTAMA</div>
+            <h3 class="menu-title">Nasi Goreng</h3>
+            <p class="menu-desc">Nasi goreng gurih dengan telur, sayuran segar, dan bumbu khas kantin.</p>
+            <div class="menu-bottom">
+              <div class="price">
+                <span class="price-val">Rp 18.000</span>
+                <span class="price-unit">/ porsi</span>
+              </div>
+              <div class="stepper-wrap" role="group" aria-label="Atur jumlah porsi Nasi Goreng">
+                <button type="button" class="btn-stepper btn-minus" data-action="decrease" data-id="nasi-goreng" aria-label="Kurangi Nasi Goreng" disabled>−</button>
+                <input class="qty" id="qty-nasi-goreng" type="number" min="0" max="99" step="1" value="0" inputmode="numeric" aria-label="Jumlah porsi Nasi Goreng">
+                <button type="button" class="btn-stepper btn-plus" data-action="increase" data-id="nasi-goreng" aria-label="Tambah Nasi Goreng">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MENU 2: MIE AYAM -->
+        <article class="menu-card" id="card-mie-ayam" data-id="mie-ayam" data-name="Mie Ayam" data-price="15000">
+          <div class="menu-image image-cream">
+            <span class="menu-badge badge-alt">Favorit Mahasiswa</span>
+            <img src="assets/mie-ayam.svg" alt="Ilustrasi semangkuk mie ayam dengan potongan ayam berbumbu" width="220" height="150" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <div class="menu-category">MAKANAN UTAMA</div>
+            <h3 class="menu-title">Mie Ayam</h3>
+            <p class="menu-desc">Mie kenyal dengan topping ayam bumbu manis gurih dan sayuran sawi hijau.</p>
+            <div class="menu-bottom">
+              <div class="price">
+                <span class="price-val">Rp 15.000</span>
+                <span class="price-unit">/ porsi</span>
+              </div>
+              <div class="stepper-wrap" role="group" aria-label="Atur jumlah porsi Mie Ayam">
+                <button type="button" class="btn-stepper btn-minus" data-action="decrease" data-id="mie-ayam" aria-label="Kurangi Mie Ayam" disabled>−</button>
+                <input class="qty" id="qty-mie-ayam" type="number" min="0" max="99" step="1" value="0" inputmode="numeric" aria-label="Jumlah porsi Mie Ayam">
+                <button type="button" class="btn-stepper btn-plus" data-action="increase" data-id="mie-ayam" aria-label="Tambah Mie Ayam">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MENU 3: ES TEH -->
+        <article class="menu-card" id="card-es-teh" data-id="es-teh" data-name="Es Teh" data-price="5000">
+          <div class="menu-image image-pink">
+            <img src="assets/es-teh.svg" alt="Ilustrasi segelas es teh manis dingin menyegarkan" width="220" height="150" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <div class="menu-category">MINUMAN SEGAR</div>
+            <h3 class="menu-title">Es Teh</h3>
+            <p class="menu-desc">Seduhan teh melati wangi dengan gula asli, disajikan dingin menyegarkan.</p>
+            <div class="menu-bottom">
+              <div class="price">
+                <span class="price-val">Rp 5.000</span>
+                <span class="price-unit">/ gelas</span>
+              </div>
+              <div class="stepper-wrap" role="group" aria-label="Atur jumlah gelas Es Teh">
+                <button type="button" class="btn-stepper btn-minus" data-action="decrease" data-id="es-teh" aria-label="Kurangi Es Teh" disabled>−</button>
+                <input class="qty" id="qty-es-teh" type="number" min="0" max="99" step="1" value="0" inputmode="numeric" aria-label="Jumlah gelas Es Teh">
+                <button type="button" class="btn-stepper btn-plus" data-action="increase" data-id="es-teh" aria-label="Tambah Es Teh">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MENU 4: JUS ALPUKAT -->
+        <article class="menu-card" id="card-jus-alpukat" data-id="jus-alpukat" data-name="Jus Alpukat" data-price="12000">
+          <div class="menu-image image-green">
+            <img src="assets/jus-alpukat.svg" alt="Ilustrasi segelas jus alpukat kental dengan cokelat" width="220" height="150" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <div class="menu-category">MINUMAN SEGAR</div>
+            <h3 class="menu-title">Jus Alpukat</h3>
+            <p class="menu-desc">Jus alpukat mentega kental dengan paduan susu kental manis cokelat.</p>
+            <div class="menu-bottom">
+              <div class="price">
+                <span class="price-val">Rp 12.000</span>
+                <span class="price-unit">/ gelas</span>
+              </div>
+              <div class="stepper-wrap" role="group" aria-label="Atur jumlah gelas Jus Alpukat">
+                <button type="button" class="btn-stepper btn-minus" data-action="decrease" data-id="jus-alpukat" aria-label="Kurangi Jus Alpukat" disabled>−</button>
+                <input class="qty" id="qty-jus-alpukat" type="number" min="0" max="99" step="1" value="0" inputmode="numeric" aria-label="Jumlah gelas Jus Alpukat">
+                <button type="button" class="btn-stepper btn-plus" data-action="increase" data-id="jus-alpukat" aria-label="Tambah Jus Alpukat">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION PESANAN SAYA & PEMBAYARAN -->
+    <section class="order-section section-wrap" id="pesanan" aria-labelledby="order-heading">
+      <div class="order-panel">
+        <!-- BAGIAN KIRI: DAFTAR PESANAN & PREFERENSI -->
+        <div class="order-main">
+          <div class="order-title-row">
+            <div>
+              <p class="section-eyebrow">RINCIAN KERANJANG</p>
+              <h2 id="order-heading">Pesanan Saya</h2>
+            </div>
+            <div class="order-count-badge" id="order-summary-badge">
+              <span id="order-item-count">0 Menu Terpilih</span>
+            </div>
+          </div>
+
+          <!-- OPSI PENYAJIAN KANTIN -->
+          <div class="order-options-bar">
+            <fieldset class="service-type-group">
+              <legend class="options-legend">Opsi Penyajian:</legend>
+              <div class="segmented-control" role="radiogroup" aria-label="Pilihan cara makan">
+                <label class="segmented-option">
+                  <input type="radio" name="service-type" value="dine-in" checked>
+                  <span class="segmented-pill">
+                    <span aria-hidden="true">🍽️</span> Makan di Tempat
+                  </span>
+                </label>
+                <label class="segmented-option">
+                  <input type="radio" name="service-type" value="takeaway">
+                  <span class="segmented-pill">
+                    <span aria-hidden="true">🥡</span> Bungkus (Takeaway)
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="order-notes-wrap">
+              <label for="order-note" class="sr-only">Nama Pemesan atau Nomor Meja</label>
+              <input type="text" id="order-note" class="order-notes-input" placeholder="Nama pemesan / nomor meja (opsional)" maxlength="40">
+            </div>
+          </div>
+
+          <!-- NOTIFIKASI ERROR / VALIDASI -->
+          <div id="order-alert" class="order-alert" role="alert" hidden>
+            <span class="alert-icon" aria-hidden="true">⚠️</span>
+            <span id="alert-text">Keranjang pesanan masih kosong. Silakan pilih minimal 1 porsi menu sebelum melanjutkan pembayaran.</span>
+            <button type="button" class="alert-close" id="alert-close-btn" aria-label="Tutup pesan peringatan">&times;</button>
+          </div>
+
+          <!-- STATE KOSONG -->
+          <div id="empty-state" class="empty-state">
+            <div class="empty-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </div>
+            <h3>Keranjang Masih Kosong</h3>
+            <p>Pilih menu pada daftar di atas untuk menambahkan pesanan makanan atau minumanmu.</p>
+            <a href="#menu" class="btn-go-menu">Lihat Daftar Menu</a>
+          </div>
+
+          <!-- DAFTAR ITEM PESANAN -->
+          <div id="pesanan-list" class="order-list" aria-live="polite"></div>
+
+          <!-- TOMBOL BERSIHKAN KERANJANG -->
+          <div class="order-actions-bar" id="order-actions-bar" hidden>
+            <button type="button" class="btn-clear-order" id="btn-clear-order">
+              <span aria-hidden="true">🗑️</span> Kosongkan Keranjang
+            </button>
+            <span class="order-items-total-label" id="order-items-total-label">Total: 0 porsi</span>
+          </div>
+        </div>
+
+        <!-- BAGIAN KANAN: RINGKASAN PEMBAYARAN -->
+        <aside class="payment-summary" aria-label="Ringkasan dan simulasi pembayaran">
+          <h3>Ringkasan Pembayaran</h3>
+
+          <div class="summary-line">
+            <span>Subtotal Pesanan</span>
+            <strong id="subtotal" class="summary-value">Rp 0</strong>
+          </div>
+
+          <div class="summary-line discount-line">
+            <span class="discount-label">
+              Diskon Mahasiswa
+              <span class="discount-pill" id="discount-pill">5%</span>
+            </span>
+            <strong id="diskon" class="discount-value">− Rp 0</strong>
+          </div>
+
+          <!-- PROGRESS BAR DISKON 5% -->
+          <div class="discount-progress-box" aria-live="polite">
+            <div class="progress-bar-track" aria-hidden="true">
+              <div class="progress-bar-fill" id="discount-progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="discount-hint" id="discount-hint">
+              Belanja minimal Rp 100.000 untuk mendapatkan diskon 5%.
+            </div>
+          </div>
+
+          <div class="summary-divider" role="separator"></div>
+
+          <div class="summary-total">
+            <div class="total-label-wrap">
+              <span class="total-label">Total Pembayaran</span>
+              <small class="total-tax-note">Sudah termasuk PPN &amp; biaya kemasan</small>
+            </div>
+            <strong id="total-harga" class="total-amount">Rp 0</strong>
+          </div>
+
+          <button class="pay-button" id="pay-button" type="button">
+            <span>Bayar Sekarang</span>
+            <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+
+          <div class="payment-guarantee">
+            <span class="guarantee-icon" aria-hidden="true">🛡️</span>
+            <span>Simulasi kasir online kantin kampus. Tidak ada pendebitan saldo riil.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL DIALOG SIMULASI PEMBAYARAN -->
+  <dialog id="payment-modal" class="payment-modal" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <!-- HEADER MODAL -->
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge">KASIR KANTIN KAMPUS</span>
+          <h2 id="modal-title" class="modal-title">Konfirmasi Pembayaran</h2>
+        </div>
+        <button type="button" class="btn-close-modal" id="modal-close-x" aria-label="Tutup jendela pembayaran">&times;</button>
+      </div>
+
+      <!-- TAMPILAN REVIEW PESANAN -->
+      <div id="modal-review-view" class="modal-view">
+        <div class="modal-info-box">
+          <div class="modal-info-col">
+            <span class="info-muted">Opsi Pesanan:</span>
+            <strong id="modal-service-display">Makan di Tempat</strong>
+          </div>
+          <div class="modal-info-col">
+            <span class="info-muted">Pemesan / Meja:</span>
+            <strong id="modal-notes-display">Warga Kampus</strong>
+          </div>
+        </div>
+
+        <div class="modal-order-summary">
+          <div class="modal-order-title">Daftar Menu yang Dipesan:</div>
+          <div id="modal-items-list" class="modal-items-list"></div>
+        </div>
+
+        <div class="modal-price-calc">
+          <div class="modal-calc-row">
+            <span>Subtotal</span>
+            <span id="modal-subtotal">Rp 0</span>
+          </div>
+          <div class="modal-calc-row discount-row" id="modal-discount-row">
+            <span>Potongan Diskon (5%)</span>
+            <span id="modal-discount">− Rp 0</span>
+          </div>
+          <div class="modal-calc-divider"></div>
+          <div class="modal-calc-row modal-total-row">
+            <strong>Total Tagihan</strong>
+            <strong id="modal-total" class="highlight-total">Rp 0</strong>
+          </div>
+        </div>
+
+        <!-- PILIHAN METODE BAYAR SIMULASI -->
+        <fieldset class="payment-method-fieldset">
+          <legend class="payment-method-legend">Pilih Metode Pembayaran Simulasi:</legend>
+          <div class="payment-options-grid">
+            <label class="pay-method-card">
+              <input type="radio" name="pay-method" value="QRIS" checked>
+              <span class="pay-method-content">
+                <span class="pay-method-icon" aria-hidden="true">📱</span>
+                <span class="pay-method-info">
+                  <strong>QRIS Kantin</strong>
+                  <small>BCA, Mandiri, GoPay, OVO</small>
+                </span>
+              </span>
+            </label>
+
+            <label class="pay-method-card">
+              <input type="radio" name="pay-method" value="Tunai">
+              <span class="pay-method-content">
+                <span class="pay-method-icon" aria-hidden="true">💵</span>
+                <span class="pay-method-info">
+                  <strong>Tunai di Kasir</strong>
+                  <small>Bayar saat ambil pesanan</small>
+                </span>
+              </span>
+            </label>
+
+            <label class="pay-method-card">
+              <input type="radio" name="pay-method" value="KantinPay">
+              <span class="pay-method-content">
+                <span class="pay-method-icon" aria-hidden="true">💳</span>
+                <span class="pay-method-info">
+                  <strong>Saldo Mahasiswa</strong>
+                  <small>KantinPay / Kartu Mahasiswa</small>
+                </span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel-payment" id="btn-cancel-payment">
+            Batal (Pertahankan Pesanan)
+          </button>
+          <button type="button" class="btn-confirm-payment" id="btn-confirm-payment">
+            Konfirmasi &amp; Bayar Sekarang
+          </button>
+        </div>
+      </div>
+
+      <!-- TAMPILAN SUKSES PEMBAYARAN -->
+      <div id="modal-success-view" class="modal-view" hidden>
+        <div class="success-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 class="success-title">Pembayaran Berhasil Disimulasikan!</h3>
+        <p class="success-desc">Pesananmu telah diteruskan ke dapur kantin kampus dan sedang diproses.</p>
+
+        <div class="receipt-card">
+          <div class="receipt-row">
+            <span>Nomor Pesanan</span>
+            <strong id="receipt-id">#KTN-00000</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Waktu Transaksi</span>
+            <span id="receipt-time">-</span>
+          </div>
+          <div class="receipt-row">
+            <span>Metode Bayar</span>
+            <span id="receipt-method">QRIS Kantin</span>
+          </div>
+          <div class="receipt-row">
+            <span>Opsi Layanan</span>
+            <span id="receipt-service">Makan di Tempat</span>
+          </div>
+          <div class="receipt-divider"></div>
+          <div class="receipt-row receipt-total-row">
+            <strong>Total Dibayar</strong>
+            <strong id="receipt-total" class="highlight-total">Rp 0</strong>
+          </div>
+        </div>
+
+        <div class="success-notice">
+          <span aria-hidden="true">📢</span> Silakan ambil pesanan di konter kantin saat nomor pesananmu dipanggil.
+        </div>
+
+        <button type="button" class="btn-success-finish" id="btn-success-finish">
+          Selesai &amp; Buat Pesanan Baru
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- FOOTER SITUS -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#beranda" aria-label="Kantin Kampus Online">
+          <span class="brand-badge" aria-hidden="true">
+            <svg class="brand-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">Kantin<span class="brand-accent">Kampus</span></span>
+            <span class="brand-subtitle">Pujasera Mahasiswa</span>
+          </span>
+        </a>
+        <p class="footer-desc">Layanan pemesanan praktis untuk mahasiswa, dosen, dan karyawan kampus. Makan enak, hemat waktu, tetap produktif.</p>
+      </div>
+
+      <div class="footer-info">
+        <div class="footer-info-block">
+          <div class="footer-info-title">Lokasi &amp; Jam Buka</div>
+          <p>Pujasera Lantai 1, Gedung Kuliah B<br>Senin – Jumat: 08.00 – 16.30 WIB</p>
+        </div>
+        <div class="footer-info-block">
+          <div class="footer-info-title">Ketentuan Diskon</div>
+          <p>Diskon 5% otomatis berlaku untuk setiap transaksi dengan subtotal minimal Rp 100.000.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kantin Kampus Online &middot; UTS Pemrograman Web (HTML, CSS, JavaScript Murni)</p>
+    </div>
+  </footer>
+</body>
+</html>
